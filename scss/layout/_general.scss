@@ -1,0 +1,44 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: none;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	scroll-behavior: smooth;
+}
+
+body, html {
+	min-height: 100%;
+	width: 100%;
+}
+
+.clear::after, .clear::before {
+	content: " ";
+	display: table;
+}
+
+.clear::after {
+	clear: both;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Prompt:300,500&display=swap');
+
+body {
+	background: #f5f5f5 url(../images/bg.png) repeat-y 15px top;
+	font: 300 14px $font;
+	padding-left: 120px;
+}
+
+.title {
+	font: 50px $title;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: $red;
+	text-shadow: 4px 3px 0 #000;
+	margin-bottom: 20px;
+	float: left;
+}

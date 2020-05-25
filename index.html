@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description" content="Starter">
+	<meta name="author" content="Admin">
+	<title>Movies tracker</title>
+
+	<link rel="icon" href="images/favicon.png">
+
+	<link rel="stylesheet" href="css/libs/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">MOVIES</h1>
+		<form action="#" class="search">
+			<input type="text" class="search__field" placeholder="Type the movie...">
+			<button class="search__btn" type="button">Search</button>
+		</form>
+		
+		<div class="movies"></div>
+	</div>
+	
+	<div class="window hide">
+		<div class="reviews">
+			<h1 class="reviews__title"></h1>
+			<button class="reviews__close">&times;</button>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="js/libs/jquery-3.4.1.min.js"></script>
+	<script src="js/libs/main.js"></script>
+</body>
+</html>
+

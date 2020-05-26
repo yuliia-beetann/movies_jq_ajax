@@ -219,20 +219,22 @@ b {
 
 .reviews {
   position: relative;
-  width: 500px;
-  height: 400px;
+  width: 600px;
+  height: 500px;
   background: #fff;
   overflow-x: hidden;
   overflow-y: scroll;
+  padding: 20px;
 }
 
 .reviews__title {
   font-size: 20px;
   font-weight: 700;
+  padding-bottom: 10px;
 }
 
 .reviews__content {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .reviews__close {

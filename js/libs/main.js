@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 
   function drawMovie(movie) {
-    let movieDOM = `<div class="movie">
+    let movieDOM = `<div class="movie ${movie.id}">
                       <img class="movie__poster" src="${IMG_URL + movie.poster_path}" alt="">
                       <h2 class="movie__title">${movie.title}</h2>
                       <div class="movie__info">
@@ -79,9 +79,8 @@ $(document).ready(function() {
   }
 
   function getReviews(id) {
-
     $.ajax({
-      url: `${API_URL}/movie/${id}`,
+      url: `${API_URL}/movie/${id}`, // дописать после ид /review or /reviews
       type: 'GET',
       dataType: 'json',
       data: {

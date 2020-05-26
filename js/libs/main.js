@@ -17,8 +17,16 @@ $(document).ready(function() {
     }
   })
 
-  $('.movie').click(() => {
-    getReviews(id)
+  $('.reviews__close').click(()=>{
+    closeReview()
+  })
+
+  $('.window').mouseup(function (e){ 
+    let div = $('.reviews')
+    if (!div.is(e.target) 
+        && div.has(e.target).length === 0) { 
+      closeReview() 
+    }
   })
 
 
@@ -47,6 +55,8 @@ $(document).ready(function() {
           res.results.forEach((movie) => {
             if (movie.poster_path !== null)
             $('.movies').append(drawMovie(movie))
+            let $movie = $('.movies').find(`.${movie.id}`)
+            $movie.click(()=>getReviews(movie.id))
           })
         }
         $('body').removeClass('loading')
@@ -70,8 +80,6 @@ $(document).ready(function() {
 
   function getReviews(id) {
 
-    console.log('test')
-
     $.ajax({
       url: `${API_URL}/movie/${id}`,
       type: 'GET',
@@ -80,13 +88,21 @@ $(document).ready(function() {
         api_key: API_KEY
       }
     }).then((res) => {
-      if (res.results.length === 0) {
-        alert('No review found')
-      } else {
-          $('.reviews').append(drawReview())
-      }
-    })
+        drawReview(res)
+      })
   }
+
+  function drawReview(movie) {
+    console.log(movie.overview)
+    $('.window').addClass('hide--off')
+    $('.reviews__title').text(movie.title)
+    $('.reviews__content').text(movie.overview)
+  }
+
+  function closeReview() {
+    $('.window').remove('hide--off')
+  }
+
 
 })
     

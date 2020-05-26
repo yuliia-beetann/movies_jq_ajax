@@ -115,6 +115,7 @@ body {
   border: solid 10px #000;
   border-radius: 7px;
   margin-top: 100px;
+  cursor: pointer;
 }
 
 .movie__poster {
@@ -217,8 +218,9 @@ b {
 }
 
 .reviews {
-  width: 0;
-  height: 0;
+  position: relative;
+  width: 500px;
+  height: 400px;
   background: #fff;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -227,5 +229,39 @@ b {
 .reviews__title {
   font-size: 20px;
   font-weight: 700;
+}
+
+.reviews__content {
+  font-size: 18px;
+}
+
+.reviews__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: 700;
+  font-size: 25px;
+  background: none;
+}
+
+.hide {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background: #00000080;
+}
+
+.hide--off {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

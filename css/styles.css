@@ -165,7 +165,8 @@ body {
 .movie:hover .movie__info {
   width: 100%;
   height: calc(100% - 49px);
-  padding: 20px 10px;
+  padding: 10px;
+  font-size: 12px;
 }
 
 .movie:hover .movie__title {
@@ -173,6 +174,10 @@ body {
   -webkit-transform: translateY(50px);
           transform: translateY(50px);
   background: #ffffff;
+}
+
+b {
+  font-weight: 700;
 }
 
 .search {
